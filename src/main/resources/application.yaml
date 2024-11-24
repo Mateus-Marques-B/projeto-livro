@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-ct1q09d6l47c73bhrung-a.oregon-postgres.render.com  
+    username: dblivro_user
+    password: gH3LbZQ054bik8EeC3xpVjOC8EX0zA7D 
+    driver-class-name: org.postgresql.Driver
+    initialize: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      generate-ddl: true
+
+  sql:
+    init:
+      schema-locations: classpath:/schema-postgresql.sql
+      mode: always
+      platform: postgres

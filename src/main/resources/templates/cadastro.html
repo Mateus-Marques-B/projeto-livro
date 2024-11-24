@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Livros</h1>
+    </header>
+    <div class="box">
+        <h2 th:text="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}"></h2>
+        <form th:action="@{${livro.id != 0 ? '/atualizar/' + livro.id : '/cadastro'}}" method="post" th:object="${livro}">
+            Título: <input type="text" th:field="*{titulo}"><br>
+            Autor: <input type="text" th:field="*{autor}"><br>
+            Gênero: <input type="text" th:field="*{genero}"><br>
+            Ano: <input type="text" th:field="*{ano}"><br>
+            <input class="btn" type="submit" th:value="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}" th:name="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}">
+        </form>
+        <a class="link3" th:href="@{/}">Voltar para página principal</a>
+    </div>
+
+</body>
+
+</html>

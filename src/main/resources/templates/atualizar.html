@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Atualizar</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Catálogo de Livros</h1>
+  </header>
+
+  <div class="box">
+    <form th:action="@{'/atualizar/' + ${id}}" method="post" th:object="${livro}">
+
+      Título: <input type="text" th:field="*{titulo}"><br>
+      Autor: <input type="text" th:field="*{autor}"><br>
+      Gênero: <input type="text" th:field="*{genero}"><br>
+      Ano: <input type="text" th:field="*{ano}"><br>
+
+      <input type="submit" value="Atualizar" name="atualizar">
+
+    </form>
+  </div>
+
+  <a th:href="@{/}">Voltar para página inicial</a>
+
+</body>
+
+</html>
