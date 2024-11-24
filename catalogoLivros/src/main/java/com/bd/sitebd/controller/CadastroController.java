@@ -31,6 +31,7 @@ public class CadastroController {
     @GetMapping("/cadastro")
     public String cadastro(Model model) {
         Livro livro = new Livro("", "", "", 0); // Novo livro
+        model.addAtribute("id",id);
         model.addAttribute("livro", livro);
         return "cadastro";
     }
