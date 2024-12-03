@@ -16,10 +16,10 @@
     <div class="box">
         <h2 th:text="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}"></h2>
         <form th:action="@{${livro.id != 0 ? '/atualizar/' + livro.id : '/cadastro'}}" method="post" th:object="${livro}">
-            Título: <input type="text" th:field="*{titulo}"><br>
-            Autor: <input type="text" th:field="*{autor}"><br>
-            Gênero: <input type="text" th:field="*{genero}"><br>
-            Ano: <input type="text" th:field="*{ano}"><br>
+            Título <input type="text" th:field="*{titulo}"><br>
+            Autor <input type="text" th:field="*{autor}"><br>
+            Gênero <input type="text" th:field="*{genero}"><br>
+            Ano <input type="text" th:field="*{ano}"><br>
             <input class="btn" type="submit" th:value="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}" th:name="${livro.id != 0 ? 'Atualizar Livro' : 'Cadastrar Livro'}">
         </form>
         <a class="link3" th:href="@{/}">Voltar para página principal</a>
