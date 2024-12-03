@@ -4,25 +4,27 @@
 }
 
 body {
-  background-color: #d3d2d2;
+  background-color: #e8f1f2;
   color: #3d3d3d;
   height: 100vh;
   font-size: 1rem;
   font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
 }
 
 header {
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #a9a9a9; /* Mesma cor do corpo para um visual mais integrado */
+  background-color: hsl(202, 78%, 49%, 25%);
   padding: 10px;
   text-align: center;
-  z-index: 1; /* Garante que o header fique acima da div.box */
+  z-index: -1;
 }
 
 .box {
@@ -30,61 +32,97 @@ header {
   flex-direction: column;
   justify-content: center; /* Distribui os links igualmente */
   align-items: center;
-  width: 30%;
+  margin-bottom: 2rem;
+  height: 60%;
+  margin-top: 9%;
+  width: 40%;
   max-width: 600px;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.box h2 {
-  margin-bottom: 40px;
-  text-decoration: underline;
+  border: 0;
+  box-shadow: 6px 6px 6px #3d3d3d, -4px -4px 4px #3d3d3d;
 }
 
-.sucesso h2 {
-  font-weight: bold;
+.box:hover {
+  box-shadow: 12px 12px 12px rgba(27, 151, 222, 0.25),
+    -10px -10px 10px rgba(27, 151, 222, 0.25);
+  border: 0;
 }
 
 .links {
   display: flex;
+  border: solid #3d3d3d;
+  border-radius: 6px;
 }
 
 .link1,
-.link2,
-.link3 {
+.link2 {
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
   color: inherit;
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 5px;
 }
 
 .link1:hover,
 .link2:hover,
 .link3:hover,
-.btn:hover {
+.btn:hover,
+.atualizar:hover,
+.atualizar2:hover {
   background-color: rgb(218, 218, 255);
   cursor: pointer;
 }
+
 .link3 {
-  margin-top: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 20px;
+  border-radius: 5px;
 }
 
-.box:hover {
-  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white;
+.atualizar {
+  color: inherit;
+  padding: 4px 4px;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
-a:hover {
-  text-decoration: underline;
+.atualizar2 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 20px;
+  border-radius: 5px;
+  background-color: rgba(27, 151, 222, 0.25);
+}
+
+.box > .sucesso {
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: rgba(27, 151, 222, 0.25);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.box h2 {
+  margin-bottom: 10px;
 }
 
 .btn {
-  padding: 12px;
-  margin-top: 12px;
+  padding: 14px;
+  background-color: rgba(27, 151, 222, 0.25);
+  margin-top: 18px;
   text-align: center;
   cursor: pointer;
 }
+
 button {
   margin-top: 3%;
   width: 12%;
@@ -94,6 +132,14 @@ button {
   border-radius: 12%;
   background-color: #ff9873;
   cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 12px;
 }
 
 table {
@@ -106,11 +152,11 @@ th,
 td {
   padding: 12px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 1px solid #3d3d3d;
 }
 
 th {
-  background-color: #a9a9a9;
+  background-color: rgba(27, 151, 222, 0.25);
   color: #3d3d3d;
 }
 
