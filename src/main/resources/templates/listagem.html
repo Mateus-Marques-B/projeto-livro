@@ -33,9 +33,9 @@
                     <td th:text="${livro.genero}"></td>
                     <td th:text="${livro.ano}"></td>
                     <td>
-                        <a th:href="@{'/atualizar/' + ${livro.id}}">Atualizar</a> |
+                        <a class="atualizar" th:href="@{'/atualizar/' + ${livro.id}}">Atualizar</a> |
                         <form th:action="@{'/deletar/' + ${livro.id}}" method="post" style="display:inline;">
-                            <input type="submit" value="Apagar">
+                            <input class="atualizar" type="submit" value="Apagar">
                         </form>
                     </td>
                 </tr>
