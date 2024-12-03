@@ -15,19 +15,22 @@
   </header>
 
   <div class="box">
+    <h2>Atualizar</h2>
     <form th:action="@{'/atualizar/' + ${id}}" method="post" th:object="${livro}">
 
-      Título: <input type="text" th:field="*{titulo}"><br>
-      Autor: <input type="text" th:field="*{autor}"><br>
-      Gênero: <input type="text" th:field="*{genero}"><br>
-      Ano: <input type="text" th:field="*{ano}"><br>
+      Título <input type="text" th:field="*{titulo}"><br>
+      Autor <input type="text" th:field="*{autor}"><br>
+      Gênero <input type="text" th:field="*{genero}"><br>
+      Ano <input type="text" th:field="*{ano}"><br>
 
-      <input type="submit" value="Atualizar" name="atualizar">
+      <input class="atualizar2" type="submit" value="Atualizar" name="atualizar">
+
+      <a class="link3" th:href="@{/}">Voltar para página inicial</a>
 
     </form>
   </div>
 
-  <a th:href="@{/}">Voltar para página inicial</a>
+
 
 </body>
 
